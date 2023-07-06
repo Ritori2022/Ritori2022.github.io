@@ -1,0 +1,35 @@
+// 公共样式
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.containerCenter {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.container {
+  width: 1200px;
+  margin: auto;
+}
+ul,li{
+  list-style: none;
+}
+button{
+  border: none;
+}
+// 标题
+.page-title{
+  width: 100%;
+  text-align: center;
+  line-height: 70px;
+}
