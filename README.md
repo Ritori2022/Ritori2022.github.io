@@ -5,11 +5,6 @@
 ## 📁 项目结构
 
 ### 🌐 websites/ - 网站项目
-- **home/** - Vue 3 + Vite 现代化个人网站
-  - 使用 Element Plus UI 框架
-  - 包含 Pinia 状态管理和 Vue Router
-  - 响应式设计，支持多页面导航
-  
 - **home_page/** - 传统静态HTML个人主页
   - 基于 jQuery 和原生 CSS
   - 简洁的单页面设计
