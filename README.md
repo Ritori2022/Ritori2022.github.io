@@ -37,6 +37,9 @@
 
 ## 🚀 快速开始
 
+### 网页访问
+https://ritori2022.github.io/
+
 ### Vue 网站项目
 ```bash
 cd websites/home
