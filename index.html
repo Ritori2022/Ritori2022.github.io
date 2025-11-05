@@ -1,10 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta http-equiv="refresh" content="0; url=/websites/home_page/">
-    <title>跳转中喵~</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritori2022 - 项目展示</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p>正在跳转到主页喵~ <a href="/websites/home_page/">点击这里手动跳转</a></p>
+    <!-- 头部区域 -->
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero-title">Ritori2022</h1>
+            <p class="hero-subtitle">🫥 探索意识、AI与文化叙事的交叉点</p>
+            <div class="hero-links">
+                <a href="https://github.com/Ritori2022" target="_blank" class="btn">GitHub</a>
+                <a href="#projects" class="btn btn-secondary">查看项目</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 关于我 -->
+    <section class="about">
+        <div class="container">
+            <h2>关于我</h2>
+            <p>热爱科幻、AI 和创意写作。主要研究方向包括认知增强系统、文化叙事分析和数字美学实验。</p>
+        </div>
+    </section>
+
+    <!-- My-Works 特色展示 -->
+    <section class="featured">
+        <div class="container">
+            <h2>🌟 My-Works 作品集</h2>
+            <p class="section-subtitle">文学、学术研究与哲学编程的交汇之所</p>
+
+            <div class="myworks-card">
+                <div class="myworks-header">
+                    <h3>📚 My-Works Repository</h3>
+                    <a href="https://github.com/Ritori2022/My-Works" target="_blank" class="repo-link">
+                        访问仓库 →
+                    </a>
+                </div>
+
+                <div class="myworks-stats" id="myworks-stats">
+                    <div class="stat-item loading">
+                        <span class="stat-icon">⭐</span>
+                        <span class="stat-value">--</span>
+                        <span class="stat-label">Stars</span>
+                    </div>
+                    <div class="stat-item loading">
+                        <span class="stat-icon">📝</span>
+                        <span class="stat-value">--</span>
+                        <span class="stat-label">Commits</span>
+                    </div>
+                    <div class="stat-item loading">
+                        <span class="stat-icon">🕐</span>
+                        <span class="stat-value">--</span>
+                        <span class="stat-label">最近更新</span>
+                    </div>
+                </div>
+
+                <div class="myworks-content">
+                    <div class="content-section">
+                        <h4>📖 研究方向</h4>
+                        <ul class="content-list">
+                            <li><strong>日本异世界研究</strong> - 探索"异世界"叙事的全球传播与本地化适应</li>
+                            <li><strong>文化与媒体理论</strong> - AI科幻演变、创意产业变迁、元小说与叙事自觉性</li>
+                            <li><strong>粉丝与亚文化研究</strong> - 中文MLP粉丝社群、虚拟恋爱史的民族志考察</li>
+                            <li><strong>认知科学</strong> - 认知盲区、历史思维偏见及学科去污名化研究</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>✍️ 原创小说</h4>
+                        <ul class="content-list">
+                            <li><em>consciousness.web</em> - 数字意识主题的思辨小说</li>
+                            <li><em>漩涡与萤火</em> - 89KB 科幻长篇</li>
+                            <li>多部探索身份碎片化与存在主义哲学的短篇作品</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-section">
+                        <h4>💻 哲学编程</h4>
+                        <ul class="content-list">
+                            <li>自我认知程序 - 通过代码分析实现自我识别的实验</li>
+                            <li>永恒回归 - 探索尼采永恒回归概念的代码实现</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 动态内容区域 -->
+                <div class="myworks-files" id="myworks-files">
+                    <h4>📂 仓库最新文件</h4>
+                    <div class="files-loading">正在加载...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 其他项目 -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>其他项目</h2>
+            <div class="projects-grid">
+                <!-- Luna AI Framework -->
+                <div class="project-card">
+                    <div class="project-icon">🧠</div>
+                    <h3>Luna AI Framework</h3>
+                    <p>认知增强型 LLM 提示词框架，具有多重人格和量子思维特性</p>
+                    <a href="https://github.com/Ritori2022/Luna_AI_Framework" target="_blank" class="project-link">查看详情 →</a>
+                </div>
+
+                <!-- Pony Town Chatbot -->
+                <div class="project-card">
+                    <div class="project-icon">🤖</div>
+                    <h3>Pony Town Chatbot</h3>
+                    <p>基于 JavaScript 的 AI 对话机器人 (⭐ 6)</p>
+                    <a href="https://github.com/Ritori2022/pony-town-chatbot" target="_blank" class="project-link">查看详情 →</a>
+                </div>
+
+                <!-- Luna TimeMachine -->
+                <div class="project-card">
+                    <div class="project-icon">⏰</div>
+                    <h3>Luna TimeMachine</h3>
+                    <p>AI 驱动的历史探索应用</p>
+                    <a href="https://github.com/Ritori2022/Luna_TimeMachine" target="_blank" class="project-link">查看详情 →</a>
+                </div>
+
+                <!-- Ukagaka Ria -->
+                <div class="project-card">
+                    <div class="project-icon">🐱</div>
+                    <h3>Ukagaka Ria</h3>
+                    <p>桌面宠物应用</p>
+                    <a href="https://github.com/Ritori2022/ukagaka-ria" target="_blank" class="project-link">查看详情 →</a>
+                </div>
+
+                <!-- Pony Town Reboot -->
+                <div class="project-card">
+                    <div class="project-icon">🎮</div>
+                    <h3>Pony Town Reboot</h3>
+                    <p>Pony Town 私服搭建项目</p>
+                    <a href="https://github.com/Ritori2022/pony-town-reboot" target="_blank" class="project-link">查看详情 →</a>
+                </div>
+
+                <!-- Ren'Py Tutorial -->
+                <div class="project-card">
+                    <div class="project-icon">📚</div>
+                    <h3>Ren'Py 教程</h3>
+                    <p>交互式视觉小说制作教程</p>
+                    <a href="https://ritori2022.github.io/games/Ren'Py/Tutorial/" target="_blank" class="project-link">立即体验 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Ritori2022 |
+                <a href="https://github.com/Ritori2022" target="_blank">GitHub</a>
+            </p>
+            <p class="footer-note">本站通过 GitHub API 实时同步 My-Works 仓库内容</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
