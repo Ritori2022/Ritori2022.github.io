@@ -1,10 +1,340 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh" class="dark scroll-smooth">
 <head>
-    <meta http-equiv="refresh" content="0; url=/home_page/">
-    <title>跳转中喵~</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ritori · AI 算法工程师</title>
+<meta name="description" data-zh="Ritori 的个人主页 —— AI 算法工程师，机器学习、大模型应用、Agent 与系统全栈。" data-en="Ritori — AI Engineer. Machine learning, LLM applications, agents, and full-stack systems." content="Ritori —— AI 算法工程师，机器学习、大模型应用、Agent 与系统全栈。" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: { extend: { fontFamily: { mono: ['ui-monospace','SFMono-Regular','Menlo','monospace'] },
+      colors: { brand: { DEFAULT: '#22d3ee', deep: '#0891b2' } } } }
+  }
+</script>
+<style>
+  html { -webkit-font-smoothing: antialiased; }
+  .card { transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+  .card:hover { transform: translateY(-4px); border-color: #22d3ee; box-shadow: 0 10px 30px -10px rgba(34,211,238,.25); }
+  .tag { font-size: 11px; }
+  [data-en] { display: none; }
+  html[lang="en"] [data-zh] { display: none; }
+  html[lang="en"] [data-en] { display: inline; }
+  html[lang="en"] p[data-en], html[lang="en"] li[data-en], html[lang="en"] span.block[data-en] { display: block; }
+</style>
 </head>
-<body>
-    <p>正在跳转到主页喵~ <a href="/home_page/">点击这里手动跳转</a></p>
+<body class="bg-zinc-50 text-zinc-800 dark:bg-[#0a0a0b] dark:text-zinc-200 font-sans antialiased">
+
+<!-- Nav -->
+<header class="sticky top-0 z-40 backdrop-blur bg-white/70 dark:bg-[#0a0a0b]/70 border-b border-zinc-200 dark:border-zinc-800">
+  <nav class="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
+    <a href="#top" class="font-mono font-bold tracking-tight text-zinc-900 dark:text-white">RITORI<span class="text-brand">.</span></a>
+    <div class="flex items-center gap-4 text-sm">
+      <a href="#projects" class="hidden sm:inline hover:text-brand"><span data-zh>项目</span><span data-en>Projects</span></a>
+      <a href="#skills" class="hidden sm:inline hover:text-brand"><span data-zh>技能</span><span data-en>Skills</span></a>
+      <a href="#courses" class="hidden sm:inline hover:text-brand"><span data-zh>课程</span><span data-en>Courses</span></a>
+      <a href="#creative" class="hidden sm:inline hover:text-brand"><span data-zh>跨界</span><span data-en>Creative</span></a>
+      <a href="#contact" class="hidden sm:inline hover:text-brand"><span data-zh>联系</span><span data-en>Contact</span></a>
+      <button id="langBtn" class="font-mono text-xs px-2 py-1 rounded border border-zinc-300 dark:border-zinc-700 hover:border-brand">EN / 中</button>
+      <button id="themeBtn" class="text-base" aria-label="toggle theme">🌙</button>
+    </div>
+  </nav>
+</header>
+
+<main id="top" class="max-w-5xl mx-auto px-5">
+
+<!-- Hero -->
+<section class="py-16 sm:py-24 flex flex-col-reverse sm:flex-row items-center gap-10">
+  <div class="flex-1 text-center sm:text-left">
+    <p class="font-mono text-brand text-sm mb-3">$ whoami</p>
+    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-white">
+      Ritori <span class="text-zinc-400 dark:text-zinc-500 text-2xl sm:text-3xl font-bold font-mono">@Ritori2022</span>
+    </h1>
+    <p class="mt-3 text-lg sm:text-xl font-semibold text-brand-deep dark:text-brand">
+      <span data-zh>AI 算法工程师 · 机器学习 · 大模型应用 · 系统全栈</span>
+      <span data-en>AI Engineer · Machine Learning · LLM Applications · Full-stack Systems</span>
+    </p>
+    <p class="mt-4 text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl">
+      <span data-zh>2026 届 UNSW（QS #19）人工智能方向硕士。能力横跨机器学习建模、大模型 / Agent / 多模态落地、从模型微调到云端部署的完整链路，并有 C 语言 OS 内核、网络协议的系统底层功底。商科自学转码，GitHub 38 仓库、十余个 AI 项目实践。</span>
+      <span data-en>2026 Master of IT (AI), UNSW (QS #19). I span ML modeling, LLM / agent / multimodal deployment, the full fine-tuning-to-cloud pipeline, and low-level systems (C OS kernel, network protocols). Self-taught career switcher from business to AI — 38 GitHub repos, 10+ shipped AI projects.</span>
+    </p>
+    <div class="mt-6 flex flex-wrap gap-3 justify-center sm:justify-start">
+      <a href="https://github.com/Ritori2022" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg bg-brand text-zinc-900 font-semibold hover:bg-brand-deep hover:text-white transition">GitHub</a>
+      <a href="https://pypi.org/project/ritori/" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 hover:border-brand font-mono text-sm">pip install ritori</a>
+      <a href="#contact" class="px-4 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 hover:border-brand"><span data-zh>联系我</span><span data-en>Contact</span></a>
+    </div>
+  </div>
+  <div class="relative w-40 h-40 sm:w-48 sm:h-48 rounded-2xl ring-2 ring-brand/40 shadow-xl bg-gradient-to-br from-brand to-brand-deep dark:from-cyan-500 dark:to-cyan-800 flex items-center justify-center select-none shrink-0" aria-label="Ritori">
+    <span class="font-mono font-extrabold text-6xl sm:text-7xl text-zinc-900/90 tracking-tighter">Ri</span>
+    <span class="absolute -top-2 -right-2 text-3xl drop-shadow" aria-hidden="true">🐱</span>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="py-12">
+  <h2 class="text-2xl font-bold text-zinc-900 dark:text-white mb-1"><span class="text-brand font-mono">#</span> <span data-zh>精选项目</span><span data-en>Featured Projects</span></h2>
+  <p class="text-sm text-zinc-500 mb-8"><span data-zh>从机器学习建模到大模型落地、再到系统底层 —— 真实指标，全部可查。</span><span data-en>From ML modeling to LLM deployment to low-level systems — real, verifiable metrics.</span></p>
+  <div class="grid sm:grid-cols-2 gap-5" id="projGrid">
+
+    <!-- Card 1 -->
+    <article class="card rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 p-5">
+      <div class="flex items-start justify-between gap-2">
+        <h3 class="font-bold text-zinc-900 dark:text-white"><span data-zh>课程洞察 AI 问答系统</span><span data-en>Course-Insight AI Q&A System</span></h3>
+        <span class="font-mono text-xs text-zinc-400 whitespace-nowrap">2026</span>
+      </div>
+      <p class="text-xs text-brand-deep dark:text-brand font-medium mt-0.5"><span data-zh>毕业设计 Capstone · 负责后端 / AI</span><span data-en>Capstone · Backend / AI lead</span></p>
+      <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+        <span data-zh>基于 LangGraph 的 RAG 检索增强问答管线（意图路由 → FAISS 向量检索 → 生成 → 格式化），FastAPI + MySQL + Docker 全栈编排，编写 128 个 pytest 测试覆盖正常 / 异常路径。</span>
+        <span data-en>LangGraph RAG pipeline (intent routing → FAISS retrieval → generation → formatting); full-stack FastAPI + MySQL + Docker, 128 pytest tests across happy/edge paths.</span>
+      </p>
+      <div class="mt-3 flex flex-wrap gap-1.5">
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">LangGraph</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">FAISS</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Gemini</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">FastAPI</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Docker</span>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="card rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 p-5">
+      <div class="flex items-start justify-between gap-2">
+        <h3 class="font-bold text-zinc-900 dark:text-white"><span data-zh>太阳能板缺陷检测系统</span><span data-en>Solar Panel Defect Detection</span></h3>
+        <span class="font-mono text-xs text-zinc-400 whitespace-nowrap">2023</span>
+      </div>
+      <p class="text-xs text-brand-deep dark:text-brand font-medium mt-0.5"><span data-zh>独立完成 · 计算机视觉 + 集成学习</span><span data-en>Solo · CV + ensemble learning</span></p>
+      <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+        <span data-zh>ELPV 电致发光图像 4 级缺陷分类：HOG + GLCM + 灰度统计多维特征，PCA 降维保留 97.5% 方差，横评 SVM/KNN/RF/GBDT/MLP，最优单模型测试准确率约 69%，并诚实归因集成过拟合。</span>
+        <span data-en>4-class defect classification on ELPV EL images: HOG + GLCM + grayscale features, PCA (97.5% variance), benchmarked SVM/KNN/RF/GBDT/MLP — best single model ~69% accuracy, with honest attribution of ensemble overfitting.</span>
+      </p>
+      <div class="mt-3 flex flex-wrap gap-1.5">
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">scikit-learn</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">HOG</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">GLCM</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">PCA</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Ensemble</span>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="card rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 p-5">
+      <div class="flex items-start justify-between gap-2">
+        <h3 class="font-bold text-zinc-900 dark:text-white"><span data-zh>日语语音合成（Tacotron2 / HiFi-GAN）</span><span data-en>Japanese TTS (Tacotron2 / HiFi-GAN)</span></h3>
+        <span class="font-mono text-xs text-zinc-400 whitespace-nowrap">2023</span>
+      </div>
+      <p class="text-xs text-brand-deep dark:text-brand font-medium mt-0.5"><span data-zh>基于开源微调 · 数据采集 + 上线独立完成</span><span data-en>Open-source base · dataset + deploy by me</span></p>
+      <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+        <span data-zh>基于开源 tacotron2-japanese 微调，自行采集并清洗视觉小说音频数据集；用 Gradio 封装交互式 Web Demo，Docker 容器化部署上线至 Hugging Face Spaces（封装与上线为本人独立完成）。</span>
+        <span data-en>Fine-tuned an open-source tacotron2-japanese base on a self-collected, self-cleaned visual-novel dataset; built a Gradio web demo and deployed it to Hugging Face Spaces via Docker.</span>
+      </p>
+      <div class="mt-3 flex flex-wrap gap-1.5">
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Tacotron2</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">HiFi-GAN</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Gradio</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">HF Spaces</span>
+      </div>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="card rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 p-5">
+      <div class="flex items-start justify-between gap-2">
+        <h3 class="font-bold text-zinc-900 dark:text-white"><span data-zh>Pony Town 视觉 Agent</span><span data-en>Pony Town Vision Agent</span></h3>
+        <span class="font-mono text-xs text-zinc-400 whitespace-nowrap">2026 · ⭐8</span>
+      </div>
+      <p class="text-xs text-brand-deep dark:text-brand font-medium mt-0.5"><span data-zh>独立完成 · 多模态 / computer-use</span><span data-en>Solo · multimodal / computer-use</span></p>
+      <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+        <span data-zh>逆向 Angular SPA 的 DOM 封装游戏内聊天 SDK；构建视觉控制 Agent：截图 → GLM-4V 图文理解 → 输出 JSON 动作 → 模拟键盘操作，实现 2D 世界自主社交闭环（screenshot → VLM → action）。</span>
+        <span data-en>Reverse-engineered an Angular SPA's DOM into an in-game chat SDK; built a vision agent: screenshot → GLM-4V understanding → JSON action → simulated input — an autonomous social loop in a 2D world (screenshot → VLM → action).</span>
+      </p>
+      <div class="mt-3 flex flex-wrap gap-1.5">
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">GLM-4V</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Computer-use</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">DOM 逆向</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">MutationObserver</span>
+      </div>
+    </article>
+
+    <!-- Card 5 -->
+    <article class="card rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 p-5">
+      <div class="flex items-start justify-between gap-2">
+        <h3 class="font-bold text-zinc-900 dark:text-white"><span data-zh>循环神经网络序列建模</span><span data-en>RNN / LSTM Sequence Modeling</span></h3>
+        <span class="font-mono text-xs text-zinc-400 whitespace-nowrap">2025</span>
+      </div>
+      <p class="text-xs text-brand-deep dark:text-brand font-medium mt-0.5"><span data-zh>深度学习课程项目</span><span data-en>Deep learning coursework</span></p>
+      <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+        <span data-zh>从零手写 SRN 与 LSTM 的参数与前向传播（非调库），训练其识别上下文相关形式语言并可视化隐藏状态演化；在 Kuzushiji-MNIST 上对比线性 / 全连接 / 卷积网络。</span>
+        <span data-en>Implemented SRN & LSTM parameters and forward pass from scratch (no libraries); trained on context-sensitive formal languages with hidden-state visualization; benchmarked linear/FC/CNN on Kuzushiji-MNIST.</span>
+      </p>
+      <div class="mt-3 flex flex-wrap gap-1.5">
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">PyTorch</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">LSTM</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">SRN</span>
+      </div>
+    </article>
+
+    <!-- Card 6 -->
+    <article class="card rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 p-5">
+      <div class="flex items-start justify-between gap-2">
+        <h3 class="font-bold text-zinc-900 dark:text-white"><span data-zh>操作系统内核开发（OS161）</span><span data-en>OS Kernel Development (OS161)</span></h3>
+        <span class="font-mono text-xs text-zinc-400 whitespace-nowrap">2024</span>
+      </div>
+      <p class="text-xs text-brand-deep dark:text-brand font-medium mt-0.5"><span data-zh>操作系统课程</span><span data-en>Operating systems coursework</span></p>
+      <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+        <span data-zh>用 C 语言实现系统调用层（进程文件描述符表与 open/read/write/close/dup2/lseek、进程创建与管理）与虚拟内存子系统（地址空间、页表、TLB 异常处理与按需分页），替换默认 dumbvm。</span>
+        <span data-en>Implemented the syscall layer (per-process fd table & open/read/write/close/dup2/lseek, process creation/management) and a VM subsystem (address spaces, page tables, TLB handling, demand paging) in C, replacing the default dumbvm.</span>
+      </p>
+      <div class="mt-3 flex flex-wrap gap-1.5">
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">C</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">OS161</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">MIPS</span>
+      </div>
+    </article>
+
+    <!-- Card 7 -->
+    <article class="card rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 p-5 sm:col-span-2">
+      <div class="flex items-start justify-between gap-2">
+        <h3 class="font-bold text-zinc-900 dark:text-white"><span data-zh>Luna AI 认知增强框架</span><span data-en>Luna — AI Cognitive Framework</span></h3>
+        <span class="font-mono text-xs text-zinc-400 whitespace-nowrap"><span data-zh>2025 至今 · PyPI 652 下载</span><span data-en>2025– · 652 PyPI downloads</span></span>
+      </div>
+      <p class="text-xs text-brand-deep dark:text-brand font-medium mt-0.5"><span data-zh>开源项目 · 独立完成</span><span data-en>Open source · solo</span></p>
+      <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-2 leading-relaxed">
+        <span data-zh>面向启发式学习与认知镜像的 LLM 提示词系统，含多人格交互、记忆锚点、认知偏见检测等模块；发布 Python 工具包至 PyPI（<code class="font-mono text-brand">pip install ritori</code>），累计 652 次下载。</span>
+        <span data-en>An LLM prompt system for heuristic learning and cognitive mirroring — multi-persona interaction, memory anchors, cognitive-bias detection; published as a Python package on PyPI (<code class="font-mono text-brand">pip install ritori</code>), 652 downloads.</span>
+      </p>
+      <div class="mt-3 flex flex-wrap gap-1.5">
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Prompt Engineering</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">Python</span>
+        <span class="tag px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">PyPI</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="py-12">
+  <h2 class="text-2xl font-bold text-zinc-900 dark:text-white mb-8"><span class="text-brand font-mono">#</span> <span data-zh>技能</span><span data-en>Skills</span></h2>
+  <div class="grid sm:grid-cols-2 gap-x-10 gap-y-6 text-sm">
+    <div>
+      <h3 class="font-semibold text-zinc-900 dark:text-white mb-2"><span data-zh>编程语言</span><span data-en>Languages</span></h3>
+      <p class="text-zinc-600 dark:text-zinc-400 font-mono text-xs leading-relaxed">Python · SQL · JavaScript / TypeScript · C · Assembly</p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-zinc-900 dark:text-white mb-2"><span data-zh>机器学习</span><span data-en>Machine Learning</span></h3>
+      <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed"><span data-zh>scikit-learn · 特征工程 · PCA 降维 · 集成学习（RF / GBDT / Stacking）· 模型评测与超参搜索 · 实验设计与 A/B 测试</span><span data-en>scikit-learn · feature engineering · PCA · ensembles (RF / GBDT / Stacking) · evaluation & hyperparameter search · experiment design & A/B testing</span></p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-zinc-900 dark:text-white mb-2"><span data-zh>深度学习 / 模型训练</span><span data-en>Deep Learning</span></h3>
+      <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed"><span data-zh>PyTorch · CNN / RNN / LSTM · TensorFlow · 模型微调（VITS / Tacotron2 / GPT-2）· Hugging Face</span><span data-en>PyTorch · CNN / RNN / LSTM · TensorFlow · fine-tuning (VITS / Tacotron2 / GPT-2) · Hugging Face</span></p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-zinc-900 dark:text-white mb-2"><span data-zh>大模型 / NLP</span><span data-en>LLM / NLP</span></h3>
+      <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed"><span data-zh>RAG（LangGraph / FAISS）· AI Agent 与多 Agent 编排 · 语义检索与 Embedding · Prompt Engineering · 图文多模态（GLM-4V）</span><span data-en>RAG (LangGraph / FAISS) · agents & multi-agent orchestration · semantic search & embeddings · prompt engineering · vision-language (GLM-4V)</span></p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-zinc-900 dark:text-white mb-2"><span data-zh>后端 / 系统 / 部署</span><span data-en>Backend / Systems / Deploy</span></h3>
+      <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed"><span data-zh>FastAPI · MySQL · JWT · RESTful API · 操作系统内核（C）· 网络协议 · Docker · Gradio · HF Spaces · Git · Linux</span><span data-en>FastAPI · MySQL · JWT · RESTful APIs · OS kernel (C) · network protocols · Docker · Gradio · HF Spaces · Git · Linux</span></p>
+    </div>
+    <div>
+      <h3 class="font-semibold text-zinc-900 dark:text-white mb-2"><span data-zh>前端 / 全栈</span><span data-en>Frontend / Full-stack</span></h3>
+      <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed"><span data-zh>React / Next.js · 单元测试（pytest / jest）· A11Y 无障碍与可用性评估</span><span data-en>React / Next.js · unit testing (pytest / jest) · A11Y & usability evaluation</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- Coursework -->
+<section id="courses" class="py-12">
+  <h2 class="text-2xl font-bold text-zinc-900 dark:text-white mb-1"><span class="text-brand font-mono">#</span> <span data-zh>学过的课</span><span data-en>Coursework</span></h2>
+  <p class="text-sm text-zinc-500 mb-8"><span data-zh>UNSW 人工智能方向硕士 · 全英文授课</span><span data-en>MSc IT (Artificial Intelligence), UNSW · taught in English</span></p>
+  <div class="grid sm:grid-cols-3 gap-x-10 gap-y-6 text-sm">
+    <div>
+      <h3 class="font-semibold text-zinc-900 dark:text-white mb-3"><span data-zh>AI / 机器学习 / 视觉</span><span data-en>AI / ML / Vision</span></h3>
+      <ul class="space-y-1.5 text-zinc-600 dark:text-zinc-400">
+        <li><span class="font-mono text-xs text-zinc-400">COMP9414</span> <span data-zh>人工智能</span><span data-en>Artificial Intelligence</span></li>
+        <li><span class="font-mono text-xs text-zinc-400">COMP9417</span> <span data-zh>机器学习与数据挖掘</span><span data-en>Machine Learning & Data Mining</span></li>
+        <li><span class="font-mono text-xs text-zinc-400">COMP9444</span> <span data-zh>神经网络与深度学习</span><span data-en>Neural Networks & Deep Learning</span></li>
+        <li><span class="font-mono text-xs text-zinc-400">COMP9517</span> <span data-zh>计算机视觉</span><span data-en>Computer Vision</span></li>
+        <li><span class="font-mono text-xs text-zinc-400">COMP4418</span> <span data-zh>知识表示与推理</span><span data-en>Knowledge Representation & Reasoning</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-semibold text-zinc-900 dark:text-white mb-3"><span data-zh>系统 / 底层</span><span data-en>Systems / Low-level</span></h3>
+      <ul class="space-y-1.5 text-zinc-600 dark:text-zinc-400">
+        <li><span class="font-mono text-xs text-zinc-400">COMP9201</span> <span data-zh>操作系统</span><span data-en>Operating Systems</span></li>
+        <li><span class="font-mono text-xs text-zinc-400">COMP9331</span> <span data-zh>计算机网络</span><span data-en>Computer Networks</span></li>
+        <li><span class="font-mono text-xs text-zinc-400">COMP9032</span> <span data-zh>微处理器与接口</span><span data-en>Microprocessors & Interfacing</span></li>
+        <li><span class="font-mono text-xs text-zinc-400">COMP9024</span> <span data-zh>数据结构与算法</span><span data-en>Data Structures & Algorithms</span></li>
+        <li><span class="font-mono text-xs text-zinc-400">COMP9021</span> <span data-zh>程序设计原理</span><span data-en>Principles of Programming</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-semibold text-zinc-900 dark:text-white mb-3"><span data-zh>数据 / 工程 / 全栈</span><span data-en>Data / Engineering / Full-stack</span></h3>
+      <ul class="space-y-1.5 text-zinc-600 dark:text-zinc-400">
+        <li><span class="font-mono text-xs text-zinc-400">COMP9311</span> <span data-zh>数据库系统</span><span data-en>Database Systems</span></li>
+        <li><span class="font-mono text-xs text-zinc-400">COMP9315</span> <span data-zh>数据库系统实现</span><span data-en>DB Systems Implementation</span></li>
+        <li><span class="font-mono text-xs text-zinc-400">COMP6080</span> <span data-zh>Web 前端开发</span><span data-en>Web Front-End Programming</span></li>
+        <li><span class="font-mono text-xs text-zinc-400">COMP9511</span> <span data-zh>人机交互</span><span data-en>Human-Computer Interaction</span></li>
+        <li><span class="font-mono text-xs text-zinc-400">COMP9900</span> <span data-zh>IT 综合项目</span><span data-en>Information Technology Project</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Creative -->
+<section id="creative" class="py-12">
+  <h2 class="text-2xl font-bold text-zinc-900 dark:text-white mb-1"><span class="text-brand font-mono">#</span> <span data-zh>跨界与创作</span><span data-en>Beyond Engineering</span></h2>
+  <p class="text-sm text-zinc-500 mb-8"><span data-zh>用同一套工程能力做人机共创 —— 这是我的差异化记忆点。</span><span data-en>The same engineering toolkit, turned toward human-AI co-creation — my differentiator.</span></p>
+  <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-zinc-600 dark:text-zinc-400">
+    <li class="flex gap-2"><span class="text-brand">▹</span><span><b class="text-zinc-800 dark:text-zinc-200"><span data-zh>人机共创科幻《漩涡与萤火》</span><span data-en>Co-written sci-fi novel "Vortex & Firefly"</span></b> — <span data-zh>分层 Prompt 协作 2.5 万字，FimTale 4,861 次下载。</span><span data-en>layered-prompt collaboration, 25k words, 4,861 downloads on FimTale.</span></span></li>
+    <li class="flex gap-2"><span class="text-brand">▹</span><span><b class="text-zinc-800 dark:text-zinc-200">Live2D <span data-zh>虚拟形象</span><span data-en>avatar model</span></b> — <span data-zh>10 小时从零学习完成，B 站饭盒 2,769 次下载，被主播使用 500+ 小时。</span><span data-en>learned & built from scratch in 10h; 2,769 downloads, used 500+ hours by streamers.</span></span></li>
+    <li class="flex gap-2"><span class="text-brand">▹</span><span><b class="text-zinc-800 dark:text-zinc-200"><span data-zh>Agent 自动化长篇写作系统</span><span data-en>Multi-agent long-form writing</span></b> — <span data-zh>多 Agent 编排生成 10 万字科幻，含章节规划与一致性校验。</span><span data-en>orchestrated agents generating a 100k-word novel with chapter planning & consistency checks.</span></span></li>
+    <li class="flex gap-2"><span class="text-brand">▹</span><span><b class="text-zinc-800 dark:text-zinc-200"><span data-zh>QQ 空间数据导出工具</span><span data-en>QZone data exporter</span></b> — <span data-zh>Selenium 自动登录 / iframe 解析 / 断点续传，开源 ⭐2。</span><span data-en>Selenium auto-login / iframe parsing / resumable export, open source ⭐2.</span></span></li>
+    <li class="flex gap-2"><span class="text-brand">▹</span><span><b class="text-zinc-800 dark:text-zinc-200"><span data-zh>基于 UDP 的可靠传输协议</span><span data-en>Reliable transport over UDP</span></b> — <span data-zh>手写滑动窗口 / 超时重传 / 累计 ACK。</span><span data-en>hand-built sliding window / timeout retransmission / cumulative ACK.</span></span></li>
+    <li class="flex gap-2"><span class="text-brand">▹</span><span><b class="text-zinc-800 dark:text-zinc-200"><span data-zh>公众号「Ria 的 AI 小站」</span><span data-en>"Ria's AI Corner" (WeChat blog)</span></b> — <span data-zh>2021 至今，科技人文深度长文与 AI 行业评测。</span><span data-en>since 2021 — long-form tech-humanities essays & AI reviews.</span></span></li>
+  </ul>
+  <a href="https://ritori2022.github.io/My-Works/" target="_blank" rel="noopener" class="inline-flex items-center gap-1 mt-5 text-sm text-brand-deep dark:text-brand hover:underline">
+    <span data-zh>查看全部创作与思考（小说 · 研究 · 随笔 140+ 篇）</span><span data-en>Browse all writing & ideas (140+ pieces: fiction · research · essays)</span> <span aria-hidden="true">→</span>
+  </a>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-12">
+  <h2 class="text-2xl font-bold text-zinc-900 dark:text-white mb-6"><span class="text-brand font-mono">#</span> <span data-zh>联系</span><span data-en>Contact</span></h2>
+  <div class="flex flex-wrap gap-3">
+    <a href="mailto:1207991271@qq.com" class="px-4 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 hover:border-brand text-sm">✉ 1207991271@qq.com</a>
+    <span class="px-4 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 text-sm"><span data-zh>微信</span><span data-en>WeChat</span> · ArrowMancer</span>
+    <a href="https://github.com/Ritori2022" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 hover:border-brand text-sm">GitHub @Ritori2022</a>
+    <a href="https://pypi.org/project/ritori/" target="_blank" rel="noopener" class="px-4 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 hover:border-brand text-sm font-mono">PyPI · ritori</a>
+  </div>
+  <p class="mt-4 text-xs text-zinc-500"><span data-zh>正在寻找 2026 全职 / 实习机会，欢迎邮件或微信联系。</span><span data-en>Actively seeking 2026 full-time / internship roles — email or WeChat welcome.</span></p>
+</section>
+
+</main>
+
+<footer class="border-t border-zinc-200 dark:border-zinc-800 mt-8">
+  <div class="max-w-5xl mx-auto px-5 py-6 text-xs text-zinc-400 flex flex-wrap items-center justify-between gap-2">
+    <span>© <span id="year"></span> Ritori · <span data-zh>广州</span><span data-en>Guangzhou</span></span>
+    <span class="font-mono"><span data-zh>用 HTML + Tailwind 手写</span><span data-en>Handcrafted with HTML + Tailwind</span></span>
+  </div>
+</footer>
+
+<script>
+  // language toggle
+  const root = document.documentElement;
+  const langBtn = document.getElementById('langBtn');
+  function setLang(l){ root.lang = l; localStorage.setItem('lang', l); langBtn.textContent = l === 'zh' ? 'EN / 中' : '中 / EN'; }
+  langBtn.addEventListener('click', () => setLang(root.lang === 'zh' ? 'en' : 'zh'));
+  setLang(localStorage.getItem('lang') || 'zh');
+
+  // theme toggle
+  const themeBtn = document.getElementById('themeBtn');
+  function setTheme(t){ root.classList.toggle('dark', t === 'dark'); localStorage.setItem('theme', t); themeBtn.textContent = t === 'dark' ? '🌙' : '☀️'; }
+  themeBtn.addEventListener('click', () => setTheme(root.classList.contains('dark') ? 'light' : 'dark'));
+  setTheme(localStorage.getItem('theme') || 'dark');
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
